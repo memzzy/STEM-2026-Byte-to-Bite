@@ -1,3 +1,4 @@
-# 26-27 best
+# 26-27 BEST
 
-this is team 1335 or sum the code is our code the pose estimation and stuff can probs be intigrated to other teams, gui's are vibecoded the rest is me and matteen
+This is our BEST 2026-27 repository for STEM School Highlands Ranch :) 
+It has Simulink and Python code on it :)
