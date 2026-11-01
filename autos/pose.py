@@ -5,7 +5,7 @@ from tag import Tag
 #tag class cuz friken vex is poopy
 #Tag class
 class Tag:
-    # id is april tag id, x and y are feild location in feet from undecided referance, rot is what  what direction the tag is facing, 360 degrees even though they only face 0 90 180 270 degrees 
+    # id is april tag id, x and y are feild location in inches from undecided referance, rot is what  what direction the tag is facing, 360 degrees even though they only face 0 90 180 270 degrees 
     def __init__(self, id, x, y, rot):
         self.id = id
         self.x = x
