@@ -24,12 +24,39 @@ class Tag:
     def get_rot(self):
             return self.rot
 
-tags = {0: Tag(0, 124, 100, 0), 1: Tag(1, 180, 101, 0), 2: Tag(2, 140, 160, 90)}
+tags = {
+    # tables: 3 x 3 grid, 36 in apart, centered on the field (flat, face up)
+    0: Tag(0, 105, 177, None),
+    1: Tag(1, 141, 177, None),
+    2: Tag(2, 177, 177, None),
+    3: Tag(3, 105, 141, None),
+    4: Tag(4, 141, 141, None),
+    5: Tag(5, 177, 141, None),
+    6: Tag(6, 105, 105, None),
+    7: Tag(7, 141, 105, None),
+    8: Tag(8, 177, 105, None),
+    # blue/red-side short wall (y = 207), facing -y toward the tables
+    9: Tag(9, 123, 207, 270),
+    10: Tag(10, 159, 207, 270),
+    # red/green-side long wall (x = 207), facing -x toward the tables
+    11: Tag(11, 207, 195, 180),
+    12: Tag(12, 207, 159, 180),
+    13: Tag(13, 207, 123, 180),
+    14: Tag(14, 207, 87, 180),
+    # yellow/green-side short wall (y = 75), facing +y toward the tables
+    15: Tag(15, 159, 75, 90),
+    16: Tag(16, 123, 75, 90),
+    # blue/yellow-side long wall (x = 75), facing +x toward the tables
+    17: Tag(17, 75, 87, 0),
+    18: Tag(18, 75, 123, 0),
+    19: Tag(19, 75, 159, 0),
+    20: Tag(20, 75, 195, 0),
+}
 
 #turns pixels into distance in inches based on an undetermined function derrived from testing the realitive size of tags at diffrent distances, something like distance = real width times something over seen pixeles
 def get_distance(width, hight):
-    distance_constant = 160.3521 #temp
-    tag_dimension = 5.25 #temp
+    distance_constant = 160.3521 #desmos regression https://www.desmos.com/calculator/ul74kkrtmd
+    tag_dimension = 4.25 #inside black square
     distance= (tag_dimension*distance_constant)/hight #random example test real
     return distance
 
