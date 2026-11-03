@@ -12,15 +12,21 @@ brain = Brain()
 controller = Controller(PRIMARY)
 
 #spider
-spider_open_pos = 
-spider_close_pos = 
+spider_open_pos = 100
+spider_close_pos = -100
 
-spider = brain
-spider =
+expander = Triport(Ports.PORT10)
+spider = Servo(expander.d)
 
 #arcade true tank false
-drive_type = TRUE./
-while TRUE:
+drive_type = True
+while True:
     #drive
     if drive_type:
+        left_force = controller.axis3.position() - controller.axis4.position()
+        right_force = controller.axis3.position() + controller.axis4.position()
+        drive(left_drive, left_force)
+        drive(right_drive, right_force)
+
+        
         

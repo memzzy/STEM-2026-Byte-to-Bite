@@ -1,4 +1,4 @@
-# array of tag instances corrosponding to the feild and sorted by id
+from vex import *
 from math import sqrt
 from tag import Tag
 
